@@ -1,0 +1,44 @@
+<mat-toolbar color="primary">
+  <span>
+    JRPotter
+  </span>
+  <span class="space-buttons"> </span>
+  <button *ngIf="! isLoggedIn()" routerLink="/login" mat-raised-button color="primary">
+    Login
+  </button>
+  <button *ngIf="isLoggedIn()" (click)="logout()" mat-raised-button color="warn">
+    Logout
+  </button>
+</mat-toolbar>
+
+
+<mat-toolbar color="primary" *ngIf="isLoggedIn()">
+  <div  class="home-area" >
+    <a routerLink="/home">
+          <i class="fa fa-home" aria-hidden="true"></i>
+    </a>
+  </div>
+  <div *ngIf="!isAdmin()" class="cart-area" >
+    <a routerLink="/cart"> 
+          <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+    </a>
+  </div>
+  <div *ngIf="!isAdmin()" class="order-area" >
+    <a routerLink="/myOrders">
+          <i class="fa fa-shopping-bag" aria-hidden="true"></i>
+    </a>
+  </div>
+  <div *ngIf="!isAdmin()" class="profile-area" >
+    <a routerLink="/profile">
+          <i class="fa fa-users" aria-hidden="true"></i>
+    </a>
+  </div>
+  <button *ngIf="isAdmin()" mat-raised-button color="primary" routerLink="/addNewProduct">Add New Product</button>
+  <button *ngIf="isAdmin()" mat-raised-button color="primary" routerLink="/showProductDetails">Show Product Details</button>
+  <button *ngIf="isAdmin()" mat-raised-button color="primary" routerLink="/orderInformation">Order Information</button>
+</mat-toolbar>
+
+
+
+
+

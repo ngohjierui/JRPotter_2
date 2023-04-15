@@ -1,0 +1,17 @@
+{
+	"folders": [
+		{
+			"name": "e-commerce-jr-ui-main",
+			"path": "."
+		},
+		{
+			"name": "JRPotter",
+			"path": "../../Documents/GitHub/JRPotter"
+		},
+		{
+			"name": "e-commerce-jr-main",
+			"path": "../e-commerce-jr-main"
+		}
+	],
+	"settings": {}
+}
